@@ -1,0 +1,19 @@
+<h2>Place Details</h2>
+
+<hr/>
+<div *ngIf="place">
+  <div>
+    <label><b>Place: </b></label> {{place.placeName}}
+  </div>
+  <div>
+    <label><b>Description: </b></label> {{place.description}}
+  </div>
+  <div>
+    <label><b>Coordinates: </b></label> {{place.coordinates}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-secondary btn-lg">Back to List</button><br>
+

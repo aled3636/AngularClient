@@ -1,0 +1,22 @@
+<h3>Update Record</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Place Name</label>
+      <input type="text" class="form-control" id="placeName" required [(ngModel)]="place.placeName" name="placeName">
+    </div>
+
+    <div class="form-group">
+      <label>Description</label>
+      <input type="text" class="form-control" id="description" required [(ngModel)]="place.description" name="description">
+    </div>
+
+    <div class="form-group">
+      <label>Coordinates</label>
+      <input type="text" class="form-control" id="coordinates" required [(ngModel)]="place.coordinates" name="coordinates">
+    </div>
+
+    <button type="submit" class="btn btn-success">Update</button>
+    <button (click)="gotoList()" class="btn btn-danger" style="margin-left: 10px">Cancel</button>
+  </form>
+</div>

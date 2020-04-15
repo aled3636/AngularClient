@@ -1,0 +1,30 @@
+<div class="panel panel-primary" >
+  <div class="panel-heading" img src="assets/img/5/png">
+    <h2>Places to visit</h2>
+  </div>
+  <div class="panel-body" >
+    <table class="table table-hover table-striped" >
+      <thead>
+      <tr>
+        <th>Place</th>
+        <th>Description</th>
+        <th>Coordinates</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let place of places | async">
+        <td>{{place.placeName}}</td>
+        <td>{{place.description}}</td>
+        <td>{{place.coordinates}}</td>
+        <td>
+          <button (click)="placeDetails(place.id)" class="btn btn-outline-secondary" >Details</button>
+          <button (click)="updatePlace(place.id)" class="btn btn-outline-secondary" style="margin-left: 10px">Update</button>
+          <button (click)="deletePlace(place.id)" class="btn btn-outline-danger" style="margin-left: 10px">Delete</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
